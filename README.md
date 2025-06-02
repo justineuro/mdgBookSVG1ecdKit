@@ -7,7 +7,7 @@
 
 This folder contains materials that allow the user to author a book containing a collection of [Musical Dice Games (MDG)](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) English Country Dances (ECD), generated based on the rules given in [*Musikalisches W&uuml;rferspiel, K.Anh.C.30.01 (1792/93) - Englische Contret&auml;nze*](https://imslp.org/wiki/Musikalische_W%C3%BCrfelspiele%2C_K.Anh.C.30.01_(Mozart%2C_Wolfgang_Amadeus)).  
 
-To creat a book, simply [download](https://github.com/justineuro/mdgBookSVG1ecdKit/archive/main.zip) (or clone: `git clone https://github.com/justineuro/mdgBookSVG1ecdKit.git`) this project to one's computer, unzip the downloaded archive, and at the command line inside the main folder (`mdgBookSVG1ecdKit` or `mdgBookSVG1ecdKit-main` directory) issue the following command (pre-requisites: `bash`, `abcmidi`, `abcm2ps`, `Ghostscript`, `Inkscape`, and `LaTeX`):
+To create a book, simply [download](https://github.com/justineuro/mdgBookSVG1ecdKit/archive/main.zip) (or clone: `git clone https://github.com/justineuro/mdgBookSVG1ecdKit.git`) this project to one's computer, unzip the downloaded archive, and at the command line inside the main folder (`mdgBookSVG1ecdKit` or `mdgBookSVG1ecdKit-main` directory) issue the following command (pre-requisites: `bash`, `abcmidi`, `abcm2ps`, `Ghostscript`, `Inkscape`, and `LaTeX`):
 
 ```shell
 bash HOWTO
