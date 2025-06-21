@@ -24,6 +24,24 @@ To download and examine an example of a book (`mdgBookSVG1ecdv1.pdf`) that was g
 (**Note**: To enable the MIDI audio links in the book, one should download [mdgBookSVGecdv1-midis.zip](https://justineuro.github.io/mdgBookSVG1ecdKit/mdgBookSVGecdv1-midis.zip) and unzip in the same directory in one's computer that contains the book, i.e., the book and midi files have to be in the same directory).
 
 
+## Important Parameters
+To personalize one's generated book (in addition to the randomly generated ECDs), one may want to change some of the default parameters/values in the following (all three files are initially found in the main directory but are eventually moved into the `res` folder): 
+
+- `mdgBookSVG1ecdv1.tex` - (main latex file) see lines 35-45; also, one may have to occasionally change the \\topmargin and \\textheight values in lines 261 and 262, to ensure that each audio MIDI file will be on the same page as the corresponding musical score
+- `mdgBookSVG1ecdv1-cover.tex`- makes the cover of the book; see lines 35-45 of `mdgBookSVG1ecdv1.tex` for default values
+- `hyperref.cfg` - contains the `\hypersetup` keyvalues; one may wish to change the default value of `pdfauthor`, among other keyvalues; see the documentation for the TeX package `hyperref` for more information on these keyvalues.
+
+Once the desired changes have been made to the files above, one can then re-compile the book by issuing, in the `res` subdirectory, the last set of commands in the HOWTO file:
+```shell
+pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG1ecdv1.tex
+bibtex mdgBookSVG1ecdv1.aux
+pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG1ecdv1.tex
+pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG1ecdv1.tex
+```
+
+Also, line 32 of the `HOWTO` is set by default so that each new book created contains 250 ECDs.  One may wish to change this number, as desired, to some other counting number.  This has to be done before issuing the `bash HOWTO` command within the `mdgBookSVG1ecdKit-main` directory.
+
+
 ## Similar Kits (by the same author) on GitHub
 MDG Book kits similar to this may be found on related GitHub sites such as:
 
@@ -35,6 +53,7 @@ MDG Book kits similar to this may be found on related GitHub sites such as:
 - [mdgBookSVG6Kit](https://justineuro.github.io/mdgBookSVG6Kit) - One-Command Kit for Creating MDG Scottish Dances (Dance-Trios) Collection Book, each dance-trio is generated based on the rules given in [*Kunst, Schottische Taenze zu componiren, ohne musicalisch zu sein*](https://imslp.org/wiki/Kunst%2C_Schottische_Taenze_zu_componiren%2C_ohne_musicalisch_zu_sein_(Gerlach%2C_Gustav))
 - [mdgBookSVG7Kit](https://justineuro.github.io/mdgBookSVG7Kit) - One-Command Kit for Creating MDG Rondos Collection Book, each rondo is generated based on the rules given in [_L'art de composer de la musique sans en connaître les éléments - 5th Cahier 2nd Ed. (1802)_](https://s9.imslp.org/files/imglnks/usimg/6/63/IMSLP653334-PMLP1047762-L'Art_de_composer_de_la_-...-Calegari_Antonio_bpt6k9617931c.pdf)
 - [mdgBookSVG8Kit](https://justineuro.github.io/mdgBookSVG8Kit) - One-Command Kit for Creating MDG Minuets Collection Book, each minuet is generated based on the rules given in [*Ludus Melothedicus 2nd ed. (1759)*](https://imslp.org/wiki/Ludus_Melothedicus_(Anonymous))
+- [mdgBookSVG10Kit](https://justineuro.github.io/mdgBookSVG10Kit) - One-Command Kit for Creating MDG Minuets-Trios Collection Book, the minuets and trios generated based on the rules given in [*Musicalische Cabala (ca. 1773)*](https://imslp.org/wiki/Musicalische_Cabala_(Schola%2C_Franciscus)) by Franciscus Schola  
 
 
 ## Acknowledgments
